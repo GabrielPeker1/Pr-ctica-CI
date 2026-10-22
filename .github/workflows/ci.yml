@@ -24,7 +24,7 @@ jobs:
           echo "name=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
           # NUEVO: nombre de la imagen en Docker Hub (en minúsculas)
           DH_USER="${{ vars.DOCKERHUB_USERNAME }}"
-          echo "dockerhub=${DH_USER,,}/dds-devops-demo" >> "$GITHUB_OUTPUT"
+          echo "dockerhub=${DH_USER,,}/dds-devops" >> "$GITHUB_OUTPUT"
 
       - name: Construir imagen Docker
         run: docker build -t dds-devops-demo:test .
